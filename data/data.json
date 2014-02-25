@@ -1,0 +1,92 @@
+{
+    "parks" : [
+        {
+            "id" : "1", 
+            "name" : "Schenley", 
+            "imageURL" : "img/SchenleyPark.jpg"
+        },
+        {
+            "id" : "2", 
+            "name" : "Frick", 
+            "imageURL" : "img/FrickPark.jpg"
+        },
+        {
+            "id" : "3", 
+            "name" : "Point State", 
+            "imageURL" : "img/PointStatePark.jpg"
+        }
+    ],
+    
+    "trees" : [
+      {
+        "name":"Black Cherry",
+        "sciName":"Prunus serotina",
+        "latitude":"40.437931",
+        "longitude":"-79.946747",
+        "elev":"248",
+        "imageURL":["img/blackcherry.jpg","img/blackcherry2.jpg"],
+        "audioURL":"audio/blackcherry.mp3",
+        "desc":"Prunus serotina, commonly called black cherry, wild black cherry, rum cherry, or mountain black cherry, is a woody plant species belonging to the genus Prunus. This cherry is native to eastern North America: from eastern Canada through southern Quebec and Ontario; south through the eastern United States to Texas and central Florida; with disjunct populations in Arizona and New Mexico; and in the mountains of Mexico and Guatemala. A mature black cherry can easily be identified in a forest by its very broken, dark grey to black bark, which has the appearance of very thick, burnt cornflakes. However, for about the first decade or so of its life, the bark is thin, smooth, and striped, resembling that of a birch. It can also quickly be identified by its long, shiny leaves resembling those of a sourwood, and by an almond-like odor released when a young twig is scratched and held close to the nose."
+      },
+      {
+        "name":"Eastern Hemlock",
+        "sciName":"Tsuga canadensis",
+        "latitude":"40.438442",
+        "longitude":"-79.946205",
+        "elev":"250",
+        "imageURL":["img/easternhemlock.jpg","img/easternhemlock2.jpg"],
+        "audioURL":"audio/easternhemlock.mp3",
+        "desc":"Tsuga canadensis, also known as eastern hemlock or Canadian hemlock, and in the French-speaking regions of Canada as Pruche du Canada, is a coniferous tree native to eastern North America. It is the state tree of Pennsylvania. The eastern hemlock grows well in shade and is very long lived, with the oldest recorded specimen being at least 554 years old. The tree generally reaches heights of about 31 meters (100 feet), but exceptional trees have been recorded up to 53 metres (173 feet). The diameter of the trunk at breast height is often 1.5 metres (5 feet), but again, outstanding trees have been recorded up to 1.75 meters (6 feet). The trunk is usually straight and monopodial, but very rarely is forked. The crown is broadly conic, while the brownish bark is scaly and deeply fissured, especially with age. The twigs are a yellow-brown in colour with darker red-brown pulvini, and are densely pubescent. The buds are ovoid in shape and are very small, measuring only 1.5 to 2.5 mm (0.05 to 0.1 inches) in length. These are usually not resinous, but may be slightly so."
+      },
+      {
+        "name":"Hackberry",
+        "sciName":"Celtis occidentalis",
+        "latitude":"40.438168",
+        "longitude":"-79.946243",
+        "elev":"244",
+        "imageURL":["img/hackberry.jpg","img/hackberry2.jpg"],
+        "audioURL":"audio/hackberry.mp3",
+        "desc":"Celtis occidentalis, commonly known as the Common hackberry, is a large deciduous tree native to North America. It is also known as the nettletree, beaverwood, northern hackberry, and American hackberry.[2] It is a moderately long-lived[2] hardwood[2] with a light-colored wood, yellowish gray to light brown with yellow streaks.[3]\nThe common hackberry is easily distinguished from elms and some other hackberries by its cork-like bark with wart-like protuberances. The remarkable bark pattern is even more pronounced in younger trees, with the irregularly-spaced ridges resembling long geologic palisades of sedimentary [layered] rock formations when viewed edge-wise [cross-section]. Coins as large as USA quarters can easily be laid flat against the valleys, which may be as deep as an adult human finger.\nThe leaves are distinctly asymmetrical and coarse-textured. It produces small berries that turn orange-red to dark purple in the autumn, often staying on the trees for several months. The common hackberry is easily confused with the sugarberry (Celtis laevigata) and is most easily distinguished by range and habitat. The common hackberry also has wider leaves that are coarser above than the sugarberry."
+      },
+      {
+        "name":"Red Oak",
+        "sciName":"Quercus rubra",
+        "latitude":"40.43837",
+        "longitude":"-79.945946",
+        "elev":"258",
+        "imageURL":["img/redoak.jpg","img/redoak2.jpg"],
+        "audioURL":"audio/redoak.mp3",
+        "desc":"Quercus rubra, commonly called northern red oak or champion oak, (syn. Quercus borealis), is an oak in the red oak group (Quercus section Lobatae). It is a native of North America, in the northeastern United States and southeast Canada. It grows from the north end of the Great Lakes, east to Nova Scotia, south as far as Georgia and states with good soil that is slightly acidic. Often simply called \"red oak\", northern red oak is formally so named to distinguish it from southern red oak (Q. falcata), also known as the Spanish oak. It is also the state tree of New Jersey and the provincial tree of Prince Edward Island."
+      },
+      {
+        "name":"Tulip Poplar",
+        "sciName":"Liriodendron tulipifera",
+        "latitude":"40.438271",
+        "longitude":"-79.946037",
+        "elev":"240",
+        "imageURL":["img/tulippoplar.jpg","img/tulippoplar2.jpg","img/tulippoplar3.jpg"],
+        "audioURL":"audio/tulippoplar.mp3",
+        "desc":"Liriodendron tulipifera - known as the tulip tree, American tulip tree, tuliptree, tulip poplar, whitewood, fiddle-tree, and yellow poplar - is the Western Hemisphere representative of the two-species genus Liriodendron, and the tallest eastern hardwood. It is native to eastern North America from Southern Ontario and Illinois eastward across southern New England and south to central Florida and Louisiana. It can grow to more than 50 m (165 feet) in virgin cove forests of the Appalachian Mountains, often with no limbs until it reaches 25�30 m (80�100 feet) in height, making it a very valuable timber tree. It is fast-growing, without the common problems of weak wood strength and short lifespan often seen in fast-growing species. April marks the start of the flowering period in the southern USA (except as noted below); trees at the northern limit of cultivation begin to flower in June. The flowers are pale green or yellow (rarely white), with an orange band on the tepals; they yield large quantities of nectar. The tulip tree is the state tree of Indiana, Kentucky, and Tennessee."
+      },
+      {
+        "name":"White Oak",
+        "sciName":"Quercus alba",
+        "latitude":"40.438007",
+        "longitude":"-79.946648",
+        "elev":"251",
+        "imageURL":["img/whiteoak.jpg","img/whiteoak2.jpg","img/whiteoak3.jpg"],
+        "audioURL":"audio/whiteoak.mp3",
+        "desc":"Quercus alba, the white oak, is one of the pre-eminent hardwoods of eastern North America. It is a long-lived oak of the family Fagaceae, native to eastern North America and found from southern Quebec west to eastern Minnesota and south to northern Florida and eastern Texas. Specimens have been documented to be over 450 years old.[2]\nAlthough called a white oak, it is very unusual to find an individual specimen with white bark; the usual color is a light gray. In the forest it can reach a magnificent height and in the open it develops into a massive broad-topped tree with large branches striking out at wide angles.[3]"
+      },
+      {
+        "name":"Ellsworth Tree (fake)",
+        "sciName":"whatever",
+        "latitude":"40.44987120626686",
+        "longitude":"-79.94996274328956",
+        "elev":"240",
+        "imageURL":["img/ellsworth.jpg"],
+        "audioURL":"audio/ping.mp3",
+        "desc":"Ellsworth is a borough in Washington County, Pennsylvania, United States."
+      }
+    ]
+}

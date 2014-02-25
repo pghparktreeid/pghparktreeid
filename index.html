@@ -1,0 +1,191 @@
+
+<html lang="en">
+	<head>
+		<title>TreeID</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.1.css" />
+	</head>
+	<body>
+		<!-- Start of body  -->
+		<script id="allparks-template" type="x-handlebars-template">
+			<!-- //This is rendered after x-handlebars-template. -->
+
+			<!-- //start of splash page  -->
+			<div id="splash" data-role="page">
+				<div data-role="header" data-theme="a">
+					<h1>My PGH Parks</h1>
+					<center>TreeID Audio Tour</center>
+				</div>
+				<div id="splashcontent" data-role="content">
+					<h3>Choose a park:</h3>
+					<ul data-role="listview" data-inset="true">
+						  <!-- /*{{#parks}} 
+						  <li onclick="setPark('{{toLowerCase name}}');"><a href="#{{toLowerCase name}}" data-transition="slide">{{name}} Park</a></li>
+					      {{/parks}}
+					      */-->
+					      <li onclick="setPark('schenley');"><a href="#schenley" data-transition="slide">Schenley Park</a></li>
+					      <li><a href="#" data-transition="slide" onclick="alert('More parks are on your way!');">Other Parks</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //end of splash page  -->
+
+			<!-- //start of setting page  -->
+			<div id="setting" data-role="dialog">
+				<div data-role="header" data-theme="a">
+					<h1>Options</h1>
+				</div>
+				<div id="settingcontent" data-role="content" data-theme="a">
+					<ul data-role="listview">
+					  <li data-icon="false"><a href="#locationBased" data-transition="slide">Location-Based Mode</a></li>
+					  <li data-icon="false"><a href="http://www.pittsburghparks.org/contactus" data-transition="slide" data-rel="external">Report a Problem</a></li>
+					  <li data-icon="false"><a href="#splash" data-transition="slide" >Choose a Park</a></li>
+					  <li data-icon="false" onclick="alert('This feature is coming your way soon!','Coming Soon!');"><a href="#" data-transition="slide">Share</a></li>
+					  <li data-icon="false" onclick="alert('This feature is coming your way soon!','Coming Soon!');"><a href="#" data-transition="slide">About</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //end of setting page  --> 
+
+			<!-- //start of location-based mode page  -->
+			<div id="locationBased" data-role="page">
+				<div data-role="header" data-theme="a">
+					<h1>Location-Based Mode</h1>
+					<a href="#splash" data-direction="reverse" data-transition="slide" data-icon="back" data-rel="back" data-iconpos="notext"></a>
+					<a href="#setting" data-transition="slide" data-icon="gear" data-iconpos="notext"></a>
+				</div>
+				<div id="settingcontent" data-role="content" data-theme="a">
+					<div id="locbaseddesc">
+						<p>The app will automatically prompt you to play the description of the nearest tree within 0.2 mile of your location. The app will continue to prompt about the next available tree&rsquo;s description automatically as you walk around the park. This allows you to have a smoother experience without having to search through the database.</p>
+						<p>Note: This mode will only work when GPS is on and when you are physically located within 0.2 mile of a tree in the park.</p>
+					</div>
+					<p><u>Trees Near You:</u></p>
+					<p id="geolocation">Click &#39;START WALKING!&#39; to begin...</p>
+
+					<ul id="locbasedresult" data-role="listview" data-inset="true"></ul>
+
+					<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="audioFooter" data-theme="a">
+						<a href="#" onclick="startLocBased();">START WALKING!</a>
+						<a href="#" onclick="stopLocBased();" class="ui-btn-right">STOP!</a>
+					</div>	
+				</div>
+			</div>
+			<!-- //end of location-based mode page  -->
+
+			<!-- //start of intro to XXX park page  -->
+			{{#parks}}
+			<div id="{{toLowerCase name}}" data-role="page">
+				<div data-role="header" data-theme="a">
+					<h1>{{name}} Park</h1>
+					<a href="#splash" data-direction="reverse" data-transition="slide" data-icon="back" data-rel="back" data-iconpos="notext"></a>
+					<a href="#setting" data-transition="slide" data-icon="gear" data-iconpos="notext"></a>
+				</div>
+				<div data-role="content">
+					<img src="{{imageURL}}" class="fullscreen"/>
+					<div id="locationModeContent">
+						<a href="#locationBased" id="locationModeInfo" data-role="button" data-icon="info">
+							Location-Based Mode
+						</a>
+						<a href="#treehome" data-transition="slide" data-role="button" data-theme="a">
+							Search Now!
+						</a>
+					</div>
+				</div>
+			</div> 
+			{{/parks}}
+			<!-- //end of intro to XXX park page  -->
+
+			<!-- //start of treehome page  -->
+			
+			
+			<div id="treehome" data-role="page">
+				<div data-role="header" data-theme="a">
+					<h1>All Trees</h1>
+					<a href="#" data-rel="back" data-direction="reverse" data-transition="slide" data-icon="back" data-iconpos="notext"></a>
+					<a href="#setting" data-transition="slide" data-icon="gear" data-iconpos="notext"></a>
+				</div>
+				<div id="treecontent" data-role="content">
+					<h3>Choose a tree:</h3>
+					
+					<ul data-role="listview" data-filter="true" data-filter-placeholder="Search for tree by name...">
+					{{#trees}}
+					<li><a href="#{{toLowerCase name}}" data-transition="slide" onclick="setChosenTree('{{name}}');">{{name}}</a></li>
+					{{/trees}}
+					</ul>
+					<!-- REMOVED
+					<ul data-role="listview">
+						  {{#trees}}
+						  <li><a href="#{{toLowerCase name}}" data-transition="slide" onclick="setChosenTree('{{name}}');">{{name}}</a></li>
+					      {{/trees}}
+					</ul>
+					-->
+				</div>
+			</div>
+			
+
+			<!-- //end of treehome page  -->
+
+			<!-- //start of XXX tree page  -->
+			{{#trees}}
+			<div id="{{toLowerCase name}}" data-role="page">
+				<div data-role="header" data-theme="a" data-position="fixed" data-tap-toggle="false">
+					<h1>{{name}}</h1>
+					<a href="#treehome" data-direction="reverse" data-transition="slide" data-icon="back" data-rel="back" data-iconpos="notext"></a>
+					<a href="#setting" data-transition="slide" data-icon="gear" data-iconpos="notext"></a>
+				</div>
+				<div class="treeNameImg" data-role="content" data-theme="a">
+					<div class="treeImageDisplay">
+						Hi! My name&rsquo;s <b><i>{{name}}</b></i> &amp; I look like this:<br/>
+						{{#imageURL}}
+							<img src="{{this}}" />
+						{{/imageURL}}
+					</div>
+					<div class="transcript">
+						{{desc}}
+					</div>
+					<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="audioFooter" data-theme="a">
+						<a href="#directions_map" class="ui-btn-left">FIND ME!</a>
+						<a href="#" onclick="togglePlayPause(getAbsolutePath('{{audioURL}}'));">
+							<img src="img/playpausebtn.png" />
+						</a>
+				        <a href="#" onclick="stopAudio();" class="ui-btn-right">STOP!</a>
+				        <!-- //to show seconds of audio <p id="audio_position"></p>-->
+					</div>	
+				</div>
+			</div> 
+			{{/trees}}
+			<!-- //end of XXX tree page  -->
+
+			<!-- //start of directions_map  page  -->
+			<div id="directions_map" data-role="page">
+				<div data-role="header" data-theme="a" data-position="fixed" data-tap-toggle="false">
+					<h1>Directions</h1>
+					<a href="#treehome" data-direction="reverse" data-transition="slide" data-icon="back" data-rel="back" data-iconpos="notext"></a>
+					<a href="#setting" data-transition="slide" data-icon="gear" data-iconpos="notext"></a>
+				</div>
+				<div data-role="content" data-theme="a" >
+					<div id="navigateInfo"></div>
+					<div id="routeMap" data-role="none">Click &#39;Navigate!&#39;<br/>Map refreshes every 10 seconds</div>
+				    <ul data-role="listview" data-inset="true" id="instructions"></ul>
+				</div>
+				<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="audioFooter" data-theme="a">
+					<a href="#" onclick="startNavigation();">NAVIGATE!</a>
+					<a href="#" onclick="stopNavigation();" class="ui-btn-right">STOP!</a>
+				</div>
+			</div>
+			<!-- //end of directions_map page  -->
+
+		</script>
+		<script src="phonegap.js"></script>
+		<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+		<script src="js/gpsUtil.js"></script>
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<script src="js/jquery.mobile-1.4.1.min.js"></script>
+		<script src="js/handlebars-v1.3.0.js"></script>
+		<script src="js/audioCtrl.js"></script>
+		<script src="js/gps.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/gmaps.js"></script>
+	</body>
+</html>
